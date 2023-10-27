@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_large"
+    android:background="@color/color_background"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="75dp">
+
+        <ImageButton
+            android:id="@+id/save_note_button"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/icon_height"
+            android:src="@drawable/icon_save"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/delete_btn" />
+
+        <ImageButton
+            android:id="@+id/delete_btn"
+            android:layout_width="@dimen/icon_height"
+            android:layout_height="@dimen/icon_width"
+            android:src="@drawable/icon_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/save_note_button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_medium"
+        android:orientation="vertical"
+        >
+
+        <EditText
+            android:id="@+id/title_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="@color/blue_light"
+            android:hint="@string/hint_input"
+            android:textColorHint="@color/blue_dark"
+            android:maxLines="1"
+            android:padding="@dimen/padding_medium"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/blue_dark"
+            />
+
+        <EditText
+            android:id="@+id/body_input"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="@color/blue_light"
+            android:gravity="start"
+            android:hint="@string/hint_body"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/padding_medium"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/blue_dark"
+            android:textColorHint="@color/blue_dark"
+            />
+    </LinearLayout>
+</LinearLayout>
